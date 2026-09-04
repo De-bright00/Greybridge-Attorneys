@@ -101,6 +101,112 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Managing Partner Section */}
+      <section className="py-20 bg-muted/20 border-y border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium">
+              <Users className="w-4 h-4" />
+              <span>Firm Leadership</span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold text-foreground text-balance">
+              Managing Partner
+            </h2>
+            <div className="w-20 h-1 bg-accent mx-auto"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Strategic counsel and executive leadership dedicated to achieving exceptional client outcomes.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Card className="border-border bg-card hover:border-accent/40 shadow-xl overflow-hidden rounded-3xl transition-all duration-300">
+              <div className="grid lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
+                {/* Partner Headshot */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative group w-full max-w-sm">
+                    <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-accent/30 bg-muted">
+                      <Image
+                        src="/images/managing-partner.jpg"
+                        alt="Abdulsamad Opeyemi Ishola, Esq. - Managing Partner at Greybridge Attorneys"
+                        fill
+                        className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground shadow-xl border-2 border-background">
+                      <Scale className="w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Partner Details */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider mb-2">
+                      Managing Partner
+                    </div>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+                      ABDULSAMAD OPEYEMI ISHOLA, ESQ.
+                    </h3>
+                    <p className="text-sm font-medium text-accent mt-1">
+                      DIL, LL.B, B.L, PGD (in view)
+                    </p>
+                  </div>
+
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                    Abdulsamad Opeyemi Ishola is the Managing Partner of Greybridge Attorneys. He holds a Diploma in Law
+                    from Kwara State College of Arabic and Islamic Legal Studies, Ilorin (CAILS), LL.B from Usmanu
+                    Danfodiyo University, Sokoto (UDUSOK), and B.L from the Nigerian Law School, Abuja Campus. He is
+                    currently pursuing a Postgraduate Diploma at the University of Benin (UNIBEN). He is involved in the
+                    Firm&apos;s legal advisory, litigation, commercial, and corporate matters and oversees the day-to-day
+                    management of the Firm.
+                  </p>
+
+                  <div className="space-y-3 pt-2 border-t border-border">
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-foreground">
+                      Key Practice Disciplines:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Legal Advisory & Corporate Practice
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Commercial Law & Transactions
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Superior Court Litigation
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Firm Management
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md">
+                      <Link href="/contact" className="flex items-center gap-2">
+                        <span>Book a Consultation</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent/10">
+                      <a
+                        href="https://wa.me/2348107814879?text=Hello, I would like to schedule a consultation with the Managing Partner."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Direct WhatsApp Inquiry
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision Section */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
