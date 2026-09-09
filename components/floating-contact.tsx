@@ -26,14 +26,14 @@ export function FloatingContact() {
   return (
     <aside
       aria-label="Quick contact actions"
-      className="fixed right-4 sm:right-6 bottom-6 sm:bottom-8 z-40 flex flex-col items-end gap-3 pointer-events-none select-none"
+      className="fixed right-3 sm:right-6 bottom-4 sm:bottom-8 z-40 flex flex-col items-end gap-2.5 sm:gap-3 pointer-events-none select-none"
     >
-      {/* 1. Primary Action: Book Consultation (Gold Pill Button) */}
+      {/* 1. Primary Action: Book Consultation (Gold Pill Button - Desktop only to avoid blocking mobile UI) */}
       <motion.div
         initial={prefersReducedMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 2.0, ease: EASE_PREMIUM }}
-        className="pointer-events-auto relative group flex items-center"
+        className="pointer-events-auto relative group hidden md:flex items-center"
       >
         {/* Tooltip */}
         {hoveredButton === "book" && (
@@ -91,9 +91,9 @@ export function FloatingContact() {
           onMouseEnter={() => setHoveredButton("whatsapp")}
           onMouseLeave={() => setHoveredButton(null)}
           aria-label="Direct WhatsApp Consultation"
-          className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-colors duration-300"
+          className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-colors duration-300"
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
       </motion.div>
 
@@ -124,9 +124,9 @@ export function FloatingContact() {
           onMouseEnter={() => setHoveredButton("call")}
           onMouseLeave={() => setHoveredButton(null)}
           aria-label="Call Greybridge Attorneys"
-          className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#08101F] hover:bg-[#0d1a33] text-white border border-white/20 flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-colors duration-300"
+          className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#08101F] hover:bg-[#0d1a33] text-white border border-white/20 flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-colors duration-300"
         >
-          <Phone className="w-5 h-5 text-[#F4C542]" />
+          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#F4C542]" />
         </motion.button>
       </motion.div>
     </aside>

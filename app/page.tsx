@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
+import { LegalChallengeSlideshow } from "@/components/legal-challenge-slideshow"
 import { FloatingContact } from "@/components/floating-contact"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -29,7 +30,6 @@ import Image from "next/image"
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<number>(0)
-  const [selectedCaseType, setSelectedCaseType] = useState<string>("corporate")
 
   const practiceAreas = [
     {
@@ -124,15 +124,6 @@ export default function HomePage() {
     },
   ]
 
-  const quickCases = [
-    { id: "corporate", label: "🏢 Form a Company / Contracts", route: "/contact" },
-    { id: "tech-ai", label: "🤖 AI, Data Privacy & Tech IP", route: "/contact" },
-    { id: "real-estate", label: "🏡 Land Due Diligence & Purchase", route: "/contact" },
-    { id: "litigation", label: "⚖️ Dispute or Court Representation", route: "/contact" },
-    { id: "ip", label: "🛡️ Trademark / Brand Protection", route: "/contact" },
-    { id: "family", label: "📜 Wills, Estates & Family Matters", route: "/contact" },
-  ]
-
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/30 selection:text-foreground">
       <Navigation />
@@ -140,44 +131,8 @@ export default function HomePage() {
       {/* Cinematic Interactive Hero Section */}
       <HeroSection />
 
-      {/* Interactive Quick Consultation Matcher */}
-      <section className="py-12 bg-muted/40 border-y border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-card rounded-2xl p-6 sm:p-8 border border-accent/30 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center lg:text-left">
-              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent uppercase tracking-wider">
-                <Clock className="w-3.5 h-3.5" />
-                <span>Instant Inquiry Dispatch</span>
-              </div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
-                What legal challenge can we solve for you?
-              </h2>
-              <p className="text-sm text-muted-foreground">
-                Select your area of interest to schedule tailored legal counsel directly:
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-2 justify-center lg:justify-end max-w-xl">
-              {quickCases.map((qc) => (
-                <Button
-                  key={qc.id}
-                  asChild
-                  variant={selectedCaseType === qc.id ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCaseType(qc.id)}
-                  className={`rounded-lg text-xs sm:text-sm transition-all duration-200 ${
-                    selectedCaseType === qc.id
-                      ? "bg-primary text-primary-foreground shadow-md"
-                      : "border-border hover:border-accent hover:text-accent bg-background"
-                  }`}
-                >
-                  <Link href={qc.route}>{qc.label}</Link>
-                </Button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Interactive Motion Legal Challenge Showcase */}
+      <LegalChallengeSlideshow />
 
       {/* Interactive Practice Area Explorer */}
       <section className="py-20 bg-background">
@@ -206,11 +161,10 @@ export default function HomePage() {
                 <button
                   key={area.id}
                   onClick={() => setActiveTab(idx)}
-                  className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 border ${
-                    isActive
+                  className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 border ${isActive
                       ? "bg-primary text-primary-foreground border-primary shadow-lg scale-105"
                       : "bg-card text-muted-foreground border-border hover:border-accent/40 hover:text-foreground"
-                  }`}
+                    }`}
                 >
                   <Icon className={`w-4 h-4 ${isActive ? "text-amber-300" : "text-accent"}`} />
                   <span>{area.title}</span>
@@ -281,7 +235,7 @@ export default function HomePage() {
                   <div className="space-y-2 text-xs text-muted-foreground pt-2">
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                      <span>Available for Urgent Consultations</span>
+                      <span>Available for Consultations</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-accent"></span>

@@ -179,11 +179,11 @@ export function HeroSection() {
       {/* ==================================================== */}
       {/* 6. MAIN HERO CONTENT CONTAINER */}
       {/* ==================================================== */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 min-h-screen flex flex-col justify-between pt-28 sm:pt-32 lg:pt-36 pb-10 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 min-h-screen flex flex-col justify-between pt-24 sm:pt-28 lg:pt-36 pb-8 sm:pb-10 w-full min-w-0 overflow-x-hidden">
         {/* Main Upper Split: Left Content + Right 3D Bookshelf */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center flex-1 my-auto">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center flex-1 my-auto w-full min-w-0">
           {/* Left Content Column (55% width) */}
-          <div className="lg:col-span-6 xl:col-span-7 z-20 space-y-6 sm:space-y-7 relative">
+          <div className="lg:col-span-6 xl:col-span-7 z-20 space-y-4 sm:space-y-6 relative w-full min-w-0">
             {/* ==================================================== */}
             {/* 7. PREMIUM EYEBROW BADGE (0.4s reveal) */}
             {/* ==================================================== */}
@@ -192,13 +192,13 @@ export function HeroSection() {
                 initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: EASE_PREMIUM }}
-                className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full border border-[#D4A017]/40 bg-[#D4A017]/10 backdrop-blur-md shadow-[0_0_20px_rgba(212,160,23,0.15)]"
+                className="inline-flex items-center gap-2 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full border border-[#D4A017]/40 bg-[#D4A017]/10 backdrop-blur-md shadow-[0_0_20px_rgba(212,160,23,0.15)] max-w-full"
               >
-                <span className="relative flex h-2 w-2">
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F4C542] opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F4C542]" />
                 </span>
-                <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#F4C542] uppercase">
+                <span className="text-[11px] sm:text-xs md:text-sm font-semibold tracking-wider text-[#F4C542] uppercase truncate sm:overflow-visible">
                   Premier Legal Counsel in Abuja &amp; Beyond
                 </span>
               </motion.div>
@@ -207,7 +207,7 @@ export function HeroSection() {
             {/* ==================================================== */}
             {/* 8. MAIN HEADLINE (0.6s reveal, staggered words) */}
             {/* ==================================================== */}
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[84px] font-bold tracking-tight leading-[1.0] sm:leading-[0.95] text-balance">
+            <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[84px] font-bold tracking-tight leading-[1.08] sm:leading-[0.95] text-balance">
               {/* First phrase: "Your Trusted" in crisp white */}
               <span className="block text-white mb-1">
                 {lineOneWords.map((word, i) => (
@@ -224,7 +224,7 @@ export function HeroSection() {
                       delay: 0.6 + i * 0.12,
                       ease: EASE_PREMIUM,
                     }}
-                    className="inline-block mr-3 sm:mr-4 last:mr-0"
+                    className="inline-block mr-2 sm:mr-4 last:mr-0"
                   >
                     {word}
                   </motion.span>
@@ -247,7 +247,7 @@ export function HeroSection() {
                       delay: 0.6 + (i + 2) * 0.12,
                       ease: EASE_PREMIUM,
                     }}
-                    className="inline-block mr-3 sm:mr-4 last:mr-0"
+                    className="inline-block mr-2 sm:mr-4 last:mr-0"
                   >
                     {word}
                   </motion.span>
@@ -262,13 +262,13 @@ export function HeroSection() {
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1, ease: EASE_PREMIUM }}
-              className="text-base sm:text-lg md:text-xl lg:text-[24px] text-white/80 font-light tracking-wide text-pretty"
+              className="text-xs sm:text-base md:text-lg lg:text-[22px] text-white/85 font-light tracking-wide flex flex-wrap items-center gap-x-2 gap-y-1"
             >
-              Excellence
-              <span className="text-[#D4A017] mx-2 sm:mx-3 font-normal">•</span>
-              Integrity
-              <span className="text-[#D4A017] mx-2 sm:mx-3 font-normal">•</span>
-              Precision in Legal Solutions
+              <span>Excellence</span>
+              <span className="text-[#D4A017] font-normal">•</span>
+              <span>Integrity</span>
+              <span className="text-[#D4A017] font-normal">•</span>
+              <span>Precision in Legal Solutions</span>
             </motion.p>
 
             {/* ==================================================== */}
@@ -278,7 +278,7 @@ export function HeroSection() {
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.3, ease: EASE_PREMIUM }}
-              className="text-sm sm:text-base lg:text-lg text-white/65 leading-relaxed max-w-xl text-pretty font-normal"
+              className="text-xs sm:text-sm md:text-base text-white/70 leading-relaxed max-w-xl text-pretty font-normal"
             >
               At Greybridge Attorneys, we bridge the gap between complex legal challenges and clear,
               accessible outcomes for forward-thinking businesses, tech startups, and private
@@ -286,54 +286,43 @@ export function HeroSection() {
             </motion.p>
 
             {/* ==================================================== */}
-            {/* 11 & 12. INTERACTIVE CTA BUTTONS & MAGNETIC EFFECT (1.5s reveal) */}
+            {/* 11 & 12. INTERACTIVE CTA BUTTONS (1.5s reveal) */}
             {/* ==================================================== */}
             <motion.div
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5, ease: EASE_PREMIUM }}
-              className="flex flex-col sm:flex-row gap-4 pt-1 items-stretch sm:items-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1 w-full sm:w-auto items-stretch sm:items-center"
             >
-              {/* Primary Magnetic CTA */}
-              <MagneticButton>
-                <motion.div
-                  whileHover={prefersReducedMotion ? {} : { y: -3, scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="w-full sm:w-auto"
+              {/* Primary CTA Button */}
+              <div className="w-full sm:w-auto">
+                <Link
+                  href="/contact"
+                  className="group relative flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-[#D4A017] via-[#F4C542] to-[#F4B000] text-slate-950 font-bold text-sm sm:text-base shadow-[0_4px_25px_rgba(212,160,23,0.3)] hover:shadow-[0_4px_35px_rgba(212,160,23,0.5)] transition-all duration-300 overflow-hidden w-full text-center active:scale-[0.98]"
                 >
-                  <Link
-                    href="/contact"
-                    className="group relative flex items-center justify-center gap-3 px-7 sm:px-8 py-4 rounded-xl bg-gradient-to-r from-[#D4A017] via-[#F4C542] to-[#F4B000] text-[#111111] font-semibold text-base sm:text-lg shadow-[0_4px_25px_rgba(212,160,23,0.3)] hover:shadow-[0_4px_35px_rgba(212,160,23,0.5)] transition-all duration-300 overflow-hidden"
-                  >
-                    <span className="relative z-10 font-semibold tracking-wide">
-                      Book a Consultation
-                    </span>
-                    <ArrowRight className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
-                    <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </Link>
-                </motion.div>
-              </MagneticButton>
+                  <span className="relative z-10 font-bold tracking-wide">
+                    Book a Consultation
+                  </span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </Link>
+              </div>
 
               {/* Secondary CTA Button */}
-              <motion.div
-                whileHover={prefersReducedMotion ? {} : { y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto"
-              >
+              <div className="w-full sm:w-auto">
                 <Link
                   href="/services"
-                  className="group flex items-center justify-center gap-2.5 px-7 sm:px-8 py-4 rounded-xl border border-white/30 hover:border-white/70 text-white hover:bg-white/10 backdrop-blur-md text-base sm:text-lg font-medium transition-all duration-300"
+                  className="group flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl border border-white/30 hover:border-white/70 text-white hover:bg-white/10 backdrop-blur-md text-sm sm:text-base font-medium transition-all duration-300 w-full text-center active:scale-[0.98]"
                 >
                   <span>Explore Our Services</span>
-                  <ArrowUpRight className="w-5 h-5 text-white/70 group-hover:text-white transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/70 group-hover:text-white transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
 
           {/* Right Column: 3D Perspective Interactive Bookshelf (45% width) */}
-          <div className="lg:col-span-6 xl:col-span-5 relative z-10 flex items-center justify-center w-full">
+          <div className="lg:col-span-6 xl:col-span-5 relative z-10 flex items-center justify-center w-full min-w-0 max-w-full overflow-hidden mt-4 lg:mt-0">
             <InteractiveBookshelf />
           </div>
         </div>
@@ -357,14 +346,14 @@ export function HeroSection() {
           {/* ==================================================== */}
           {/* 13 & 14. STATISTICS SECTION WITH ANIMATED COUNTERS (2.0s reveal) */}
           {/* ==================================================== */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 w-full">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5 w-full">
             {/* Stat 1: 10+ Practice Disciplines */}
             <motion.div
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2.0, ease: EASE_PREMIUM }}
               whileHover={prefersReducedMotion ? {} : { y: -6 }}
-              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
+              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-3.5 py-3 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
             >
               <p className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F4C542] mb-1">
                 <AnimatedStatCounter target={10} suffix="+" />
@@ -374,16 +363,16 @@ export function HeroSection() {
               </p>
             </motion.div>
 
-            {/* Stat 2: 24h Response Guarantee */}
+            {/* Stat 2: 24hrs Response Guarantee */}
             <motion.div
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2.1, ease: EASE_PREMIUM }}
               whileHover={prefersReducedMotion ? {} : { y: -6 }}
-              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
+              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-3.5 py-3 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
             >
               <p className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F4C542] mb-1">
-                <AnimatedStatCounter target={24} suffix="h" />
+                <AnimatedStatCounter target={24} suffix="hrs" />
               </p>
               <p className="text-xs sm:text-sm text-[#B8BAC0] font-medium tracking-wide">
                 Response Guarantee
@@ -396,7 +385,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2.2, ease: EASE_PREMIUM }}
               whileHover={prefersReducedMotion ? {} : { y: -6 }}
-              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
+              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-3.5 py-3 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
             >
               <p className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F4C542] mb-1">
                 <AnimatedStatCounter target={98} suffix="%" />
@@ -406,19 +395,19 @@ export function HeroSection() {
               </p>
             </motion.div>
 
-            {/* Stat 4: Abuja Headquarters */}
+            {/* Stat 4: Abuja Head Office */}
             <motion.div
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2.3, ease: EASE_PREMIUM }}
               whileHover={prefersReducedMotion ? {} : { y: -6 }}
-              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-5 py-3.5 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
+              className="group relative bg-white/[0.06] hover:bg-white/[0.09] backdrop-blur-xl border border-white/10 hover:border-[#D4A017]/60 rounded-xl px-3.5 py-3 sm:px-6 sm:py-4.5 transition-colors duration-300 shadow-lg"
             >
               <p className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F4C542] mb-1">
                 Abuja
               </p>
               <p className="text-xs sm:text-sm text-[#B8BAC0] font-medium tracking-wide">
-                FCT Headquarters
+                Head Office
               </p>
             </motion.div>
           </div>

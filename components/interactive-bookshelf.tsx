@@ -171,7 +171,7 @@ export function InteractiveBookshelf() {
   }, [isDesktop, prefersReducedMotion])
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[440px] lg:h-[480px] flex items-center justify-center select-none">
+    <div className="relative w-full max-w-full h-[320px] sm:h-[440px] lg:h-[480px] flex items-center justify-center select-none overflow-hidden">
       {/* 3D Perspective Stage on Desktop */}
       <div
         style={{
@@ -297,14 +297,14 @@ export function InteractiveBookshelf() {
       </div>
 
       {/* Mobile Touch Carousel (< 1024px) */}
-      <div className="lg:hidden w-full overflow-x-auto scrollbar-none flex gap-4 snap-x snap-mandatory px-4 py-6">
+      <div className="lg:hidden w-full max-w-full overflow-x-auto scrollbar-none flex gap-3.5 snap-x snap-mandatory px-4 py-3 touch-pan-x">
         {LEGAL_BOOKS.map((book) => {
           const Icon = book.icon
           return (
             <Link
               key={book.id}
               href={book.href}
-              className="flex-shrink-0 snap-center w-[210px] h-[310px] rounded-[3px] bg-gradient-to-br from-[#0a1224] via-[#080d19] to-[#04070d] border border-[#D4A017]/40 shadow-xl flex flex-col justify-between p-4.5 relative"
+              className="flex-shrink-0 snap-center w-[175px] sm:w-[210px] h-[260px] sm:h-[310px] rounded-[3px] bg-gradient-to-br from-[#0a1224] via-[#080d19] to-[#04070d] border border-[#D4A017]/40 shadow-xl flex flex-col justify-between p-3.5 sm:p-4.5 relative"
             >
               {/* Inner gold border */}
               <div className="absolute inset-2 border border-[#D4A017]/20 rounded-[2px] pointer-events-none" />

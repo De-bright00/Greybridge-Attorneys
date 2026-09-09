@@ -56,7 +56,7 @@ export function Navigation() {
           : "bg-transparent border-b border-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 flex items-center justify-between">
         {/* Left: Brand Logo */}
         <Link href="/" className="flex items-center transition-opacity hover:opacity-90">
           <Image
