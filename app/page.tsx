@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
+import { HeroSection } from "@/components/hero-section"
 import { FloatingContact } from "@/components/floating-contact"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -136,90 +137,8 @@ export default function HomePage() {
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/30 selection:text-foreground">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
-        {/* Background Image - Vividly visible */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-100 transition-transform duration-1000"
-          style={{ backgroundImage: "url('/greybridge-hero-bg.png')" }}
-        ></div>
-
-        {/* Cinematic Gradient Scrim - Keeps picture vivid while delivering high contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-slate-950/80"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-slate-950/40 to-slate-950/90 pointer-events-none"></div>
-
-        {/* Hero Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Top pill badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/40 backdrop-blur-md shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-700">
-              <Sparkles className="w-4 h-4 text-amber-300" />
-              <span className="text-xs sm:text-sm font-semibold tracking-wide text-amber-200 uppercase">
-                Premier Legal Counsel in Abuja & Beyond
-              </span>
-            </div>
-
-            {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.15] drop-shadow-md text-balance">
-                Your Trusted <span className="text-amber-300 drop-shadow-sm">Legal Partners</span>
-              </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 font-light tracking-wide drop-shadow text-pretty">
-                Excellence • Integrity • Precision in Legal Solutions
-              </p>
-            </div>
-
-            {/* Lead Description */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto text-pretty font-normal drop-shadow">
-              At Greybridge Attorneys, we bridge the gap between complex legal challenges and clear, accessible outcomes
-              for forward-thinking businesses, tech startups, and private individuals.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
-              <Button
-                asChild
-                size="lg"
-                className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold shadow-xl hover:shadow-amber-500/25 text-base sm:text-lg px-8 py-6 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <Link href="/contact" className="flex items-center gap-2">
-                  <span>Book a Consultation</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto border-white/30 hover:border-white text-white hover:bg-white/10 text-base sm:text-lg px-8 py-6 rounded-xl bg-slate-900/40 backdrop-blur-md transition-all duration-300"
-              >
-                <Link href="/services">Explore Our Services</Link>
-              </Button>
-            </div>
-
-            {/* Quick trust metrics ticker */}
-            <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-white/15">
-              <div className="p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-300 font-serif">10+</p>
-                <p className="text-xs text-gray-300">Practice Disciplines</p>
-              </div>
-              <div className="p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-300 font-serif">24h</p>
-                <p className="text-xs text-gray-300">Response Guarantee</p>
-              </div>
-              <div className="p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-300 font-serif">98%</p>
-                <p className="text-xs text-gray-300">Client Satisfaction</p>
-              </div>
-              <div className="p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-300 font-serif">Abuja</p>
-                <p className="text-xs text-gray-300">FCT Headquarters</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Cinematic Interactive Hero Section */}
+      <HeroSection />
 
       {/* Interactive Quick Consultation Matcher */}
       <section className="py-12 bg-muted/40 border-y border-border">

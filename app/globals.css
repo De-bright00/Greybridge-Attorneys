@@ -127,6 +127,32 @@
   }
   /* Added custom typography classes */
   .font-serif {
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
   }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

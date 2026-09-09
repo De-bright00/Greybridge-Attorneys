@@ -107,10 +107,10 @@ export default function AboutPage() {
           <div className="text-center space-y-4 mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium">
               <Users className="w-4 h-4" />
-              <span>Firm Leadership</span>
+              <span>Leadership & Legal Counsel</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl font-bold text-foreground text-balance">
-              Partners & Leadership
+              Partners & Associates
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -263,6 +263,73 @@ export default function AboutPage() {
                       </span>
                       <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
                         Legal Research & Strategy
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Associate Card */}
+            <Card className="border-border bg-card hover:border-accent/40 shadow-xl overflow-hidden rounded-3xl transition-all duration-300">
+              <div className="grid lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
+                {/* Associate Headshot */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative group w-full max-w-sm">
+                    <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-accent/30 bg-muted">
+                      <Image
+                        src="/images/comfort-oluwabiyi.jpg"
+                        alt="Comfort Oluwabiyi, Esq. - Associate at Greybridge Attorneys"
+                        fill
+                        className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground shadow-xl border-2 border-background">
+                      <Scale className="w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Associate Details */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider mb-2">
+                      Associate
+                    </div>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+                      COMFORT OLUWABIYI, ESQ.
+                    </h3>
+                    <p className="text-sm font-medium text-accent mt-1">
+                      LL.B, B.L
+                    </p>
+                  </div>
+
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                    Comfort Oluwabiyi is an Associate at Greybridge Attorneys. She holds an LL.B from the University of
+                    Abuja and a B.L from the Nigerian Law School, Lagos Campus. Her practice covers litigation, legal
+                    advisory, corporate matters, legal research, and public sector engagements.
+                  </p>
+
+                  <div className="space-y-3 pt-2 border-t border-border">
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-foreground">
+                      Key Practice Disciplines:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Superior Court Litigation
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Legal Advisory
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Corporate Matters
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Legal Research
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Public Sector Engagements
                       </span>
                     </div>
                   </div>
