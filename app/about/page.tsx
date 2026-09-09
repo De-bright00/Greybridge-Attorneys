@@ -101,7 +101,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Managing Partner Section */}
+      {/* Partners & Leadership Section */}
       <section className="py-20 bg-muted/20 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
@@ -110,15 +110,16 @@ export default function AboutPage() {
               <span>Firm Leadership</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl font-bold text-foreground text-balance">
-              Managing Partner
+              Partners & Leadership
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Strategic counsel and executive leadership dedicated to achieving exceptional client outcomes.
+              Strategic counsel, seasoned advocacy, and executive leadership dedicated to achieving exceptional client outcomes.
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto space-y-12">
+            {/* Managing Partner Card */}
             <Card className="border-border bg-card hover:border-accent/40 shadow-xl overflow-hidden rounded-3xl transition-all duration-300">
               <div className="grid lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
                 {/* Partner Headshot */}
@@ -199,6 +200,71 @@ export default function AboutPage() {
                         Direct WhatsApp Inquiry
                       </a>
                     </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Partner Card */}
+            <Card className="border-border bg-card hover:border-accent/40 shadow-xl overflow-hidden rounded-3xl transition-all duration-300">
+              <div className="grid lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
+                {/* Partner Headshot */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative group w-full max-w-sm">
+                    <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-accent/30 bg-muted">
+                      <Image
+                        src="/images/fatiu-bolakale-lawal.jpg"
+                        alt="Fatiu Bolakale Lawal, Esq. - Partner at Greybridge Attorneys"
+                        fill
+                        className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground shadow-xl border-2 border-background">
+                      <Scale className="w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Partner Details */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider mb-2">
+                      Partner
+                    </div>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+                      FATIU BOLAKALE LAWAL, ESQ.
+                    </h3>
+                    <p className="text-sm font-medium text-accent mt-1">
+                      B.A, LL.B, B.L, MTI , LL.M (in view)
+                    </p>
+                  </div>
+
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                    Fatiu Bolakale Lawal is a Partner at Greybridge Attorneys. He holds a B.A. in History and
+                    International Studies and an LL.B from Kwara State University, Malete (KWASU), and a B.L from
+                    the Nigerian Law School, Lagos Campus. He is currently pursuing an LL.M at Al-Hikmah University,
+                    Ilorin. His practice covers litigation, legal advisory, corporate matters, and legal research.
+                  </p>
+
+                  <div className="space-y-3 pt-2 border-t border-border">
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-foreground">
+                      Key Practice Disciplines:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Superior Court Litigation
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Legal Advisory
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Corporate Matters
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Legal Research & Strategy
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
