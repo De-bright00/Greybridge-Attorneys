@@ -347,7 +347,7 @@ export function HeroSection() {
           {/* 13 & 14. STATISTICS SECTION WITH ANIMATED COUNTERS (2.0s reveal) */}
           {/* ==================================================== */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-5 w-full">
-            {/* Stat 1: 10+ Practice Disciplines */}
+            {/* Stat 1: 10+ Practice Areas */}
             <motion.div
               initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -359,7 +359,7 @@ export function HeroSection() {
                 <AnimatedStatCounter target={10} suffix="+" />
               </p>
               <p className="text-xs sm:text-sm text-[#B8BAC0] font-medium tracking-wide">
-                Practice Disciplines
+                Practice Areas
               </p>
             </motion.div>
 

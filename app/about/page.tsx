@@ -188,7 +188,6 @@ export default function AboutPage() {
                     <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md">
                       <Link href="/contact" className="flex items-center gap-2">
                         <span>Book a Consultation</span>
-                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent/10">
@@ -263,6 +262,77 @@ export default function AboutPage() {
                       </span>
                       <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
                         Legal Research & Strategy
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Partner Card - Kamaldeen Abdulhameed */}
+            <Card className="border-border bg-card hover:border-accent/40 shadow-xl overflow-hidden rounded-3xl transition-all duration-300">
+              <div className="grid lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
+                {/* Partner Headshot */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative group w-full max-w-sm">
+                    <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-accent/30 bg-muted">
+                      <Image
+                        src="/images/kamaldeen-abdulhameed.jpg"
+                        alt="Kamaldeen Abdulhameed, Esq. - Partner at Greybridge Attorneys"
+                        fill
+                        className="object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div className="absolute -bottom-3 -right-3 w-14 h-14 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground shadow-xl border-2 border-background">
+                      <Scale className="w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Partner Details */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider mb-2">
+                      Partner
+                    </div>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+                      KAMALDEEN ABDULHAMEED, ESQ.
+                    </h3>
+                    <p className="text-sm font-medium text-accent mt-1">
+                      LL.B, B.L, AICMC
+                    </p>
+                  </div>
+
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                    Kamaldeen Abdulhameed is a Partner at Greybridge Attorneys and a Legal Practitioner with
+                    experience in litigation, property law, corporate and commercial law, and regulatory
+                    compliance. He obtained his LL.B from Usmanu Danfodiyo University and his B.L from
+                    the Nigerian Law School, Abuja Campus. He is a Certified Associate of the Institute of
+                    Chartered Mediators and Conciliators, with competence in dispute resolution, Arbitration
+                    and mediation. Kamaldeen is committed to building a forward-thinking legal practice focused
+                    on access to justice, corporate governance, and alternative dispute resolution.
+                  </p>
+
+                  <div className="space-y-3 pt-2 border-t border-border">
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-foreground">
+                      Key Practice Disciplines:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Superior Court Litigation
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Property & Real Estate Law
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Corporate & Commercial Law
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Regulatory Compliance
+                      </span>
+                      <span className="px-3 py-1 text-xs rounded-lg bg-accent/10 text-accent font-medium border border-accent/20">
+                        Arbitration & Mediation (ICMC)
                       </span>
                     </div>
                   </div>

@@ -38,7 +38,7 @@ export interface LegalChallenge {
 export const LEGAL_CHALLENGES: LegalChallenge[] = [
   {
     id: "land-acquisition",
-    shortLabel: "🏡 Land Acquisition, Sale & Lease",
+    shortLabel: "Land Acquisition, Sale & Lease",
     title: "Land Acquisition, Sale & Lease",
     category: "Real Estate & Property Law",
     icon: Landmark,
@@ -60,7 +60,7 @@ export const LEGAL_CHALLENGES: LegalChallenge[] = [
   },
   {
     id: "company-formation",
-    shortLabel: "🏢 Company Formation/ Contracts",
+    shortLabel: "Company Formation/ Contracts",
     title: "Company Formation/ Contracts",
     category: "Corporate & Commercial Law",
     icon: Building2,
@@ -82,7 +82,7 @@ export const LEGAL_CHALLENGES: LegalChallenge[] = [
   },
   {
     id: "adr-court-representation",
-    shortLabel: "⚖️ ADR or Court Representation",
+    shortLabel: "ADR or Court Representation",
     title: "ADR or Court Representation",
     category: "Litigation & Dispute Resolution",
     icon: Scale,
@@ -104,7 +104,7 @@ export const LEGAL_CHALLENGES: LegalChallenge[] = [
   },
   {
     id: "tech-ai-law",
-    shortLabel: "🤖 AI, Data Privacy & Tech IP",
+    shortLabel: "AI, Data Privacy & Tech IP",
     title: "AI, Data Privacy & Tech IP",
     category: "Technology & Emerging Governance",
     icon: Cpu,
@@ -126,7 +126,7 @@ export const LEGAL_CHALLENGES: LegalChallenge[] = [
   },
   {
     id: "trademark-ip",
-    shortLabel: "🛡️ Trademark / Brand Protection",
+    shortLabel: "Trademark / Brand Protection",
     title: "Trademark / Brand Protection",
     category: "Intellectual Property Advisory",
     icon: ShieldCheck,
@@ -148,7 +148,7 @@ export const LEGAL_CHALLENGES: LegalChallenge[] = [
   },
   {
     id: "family-estates",
-    shortLabel: "📜 Wills, Estates & Family Matters",
+    shortLabel: "Wills, Estates & Family Matters",
     title: "Wills, Estates & Family Matters",
     category: "Private Advisory & Succession",
     icon: BookOpen,
@@ -218,10 +218,8 @@ export function LegalChallengeSlideshow() {
         {/* Section Header */}
         <div className="text-center space-y-3 mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4A017]/10 border border-[#D4A017]/30 text-[#F4C542] text-xs font-semibold uppercase tracking-wider">
-            <Clock className="w-3.5 h-3.5" />
             <span>Instant Inquiry Dispatch</span>
             <span className="w-1 h-1 rounded-full bg-[#F4C542]" />
-            <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Motion Showcase</span>
           </div>
 
@@ -325,7 +323,7 @@ export function LegalChallengeSlideshow() {
                       <div className="grid sm:grid-cols-2 gap-2">
                         {activeChallenge.deliverables.map((item, dIdx) => (
                           <div key={dIdx} className="flex items-start gap-2 text-xs text-gray-200">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#F4C542] shrink-0 mt-0.5" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#F4C542] shrink-0 mt-1.5" />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -340,7 +338,6 @@ export function LegalChallengeSlideshow() {
                       >
                         <Link href={`/contact?service=${encodeURIComponent(activeChallenge.contactServiceParam)}`}>
                           <span>Schedule Consultation for this Matter</span>
-                          <ArrowRight className="w-4 h-4 ml-1.5" />
                         </Link>
                       </Button>
 
@@ -350,7 +347,6 @@ export function LegalChallengeSlideshow() {
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/20 hover:border-[#D4A017] text-white text-xs sm:text-sm font-semibold transition-colors duration-200 text-center"
                       >
-                        <MessageCircle className="w-4 h-4 text-emerald-400" />
                         <span>WhatsApp Partner</span>
                       </a>
                     </div>

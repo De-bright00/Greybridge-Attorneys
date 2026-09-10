@@ -155,18 +155,16 @@ export default function HomePage() {
           {/* Interactive Navigation Tabs */}
           <div className="flex flex-wrap gap-2 justify-center mb-10">
             {practiceAreas.map((area, idx) => {
-              const Icon = area.icon
               const isActive = activeTab === idx
               return (
                 <button
                   key={area.id}
                   onClick={() => setActiveTab(idx)}
-                  className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 border ${isActive
+                  className={`px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 border ${isActive
                       ? "bg-primary text-primary-foreground border-primary shadow-lg scale-105"
                       : "bg-card text-muted-foreground border-border hover:border-accent/40 hover:text-foreground"
                     }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? "text-amber-300" : "text-accent"}`} />
                   <span>{area.title}</span>
                 </button>
               )
@@ -203,7 +201,7 @@ export default function HomePage() {
                   <div className="grid sm:grid-cols-2 gap-2.5">
                     {practiceAreas[activeTab].features.map((feature, fIdx) => (
                       <div key={fIdx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-2" />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -214,7 +212,6 @@ export default function HomePage() {
                   <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md">
                     <Link href="/contact" className="flex items-center gap-2">
                       <span>Schedule Consultation for this Area</span>
-                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-border hover:bg-accent/10">

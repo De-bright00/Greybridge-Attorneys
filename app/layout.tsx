@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     "CAC company incorporation Nigeria",
     "Abdulsamad Opeyemi Ishola",
     "Fatiu Bolakale Lawal",
+    "Kamaldeen Abdulhameed",
     "Comfort Oluwabiyi",
   ],
   alternates: {
@@ -138,6 +139,11 @@ const legalServiceSchema = {
     {
       "@type": "Person",
       name: "Fatiu Bolakale Lawal, Esq.",
+      jobTitle: "Partner",
+    },
+    {
+      "@type": "Person",
+      name: "Kamaldeen Abdulhameed, Esq.",
       jobTitle: "Partner",
     },
     {

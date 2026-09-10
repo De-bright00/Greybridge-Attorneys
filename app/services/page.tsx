@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { FloatingContact } from "@/components/floating-contact"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Building2, Cpu, Scale, Home, Users, Shield, CheckCircle, ArrowRight, Sparkles, PhoneCall } from "lucide-react"
+import { Building2, Cpu, Scale, Home, Users, Shield, PhoneCall } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesPage() {
@@ -128,7 +128,6 @@ export default function ServicesPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/40 backdrop-blur-md">
-              <Sparkles className="w-4 h-4 text-amber-300" />
               <span className="text-xs sm:text-sm font-semibold text-amber-200 uppercase tracking-wider">
                 Full-Service Legal Solutions
               </span>
@@ -197,7 +196,7 @@ export default function ServicesPage() {
                       <ul className="space-y-2">
                         {service.items.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-muted-foreground">
-                            <CheckCircle className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-2" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -208,7 +207,6 @@ export default function ServicesPage() {
                       <Button asChild size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
                         <Link href="/contact" className="flex items-center gap-2">
                           <span>Book Consultation for this Area</span>
-                          <ArrowRight className="w-4 h-4" />
                         </Link>
                       </Button>
                     </div>
@@ -235,7 +233,6 @@ export default function ServicesPage() {
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8 py-6">
               <Link href="/contact" className="flex items-center gap-2">
                 <span>Schedule a Consultation</span>
-                <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border hover:bg-muted px-8 py-6">
